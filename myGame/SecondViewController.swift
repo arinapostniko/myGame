@@ -12,7 +12,10 @@ class SecondViewController: UIViewController {
     // MARK: - Private properties
     private let circleView = UIView()
     
-    private let circleRadius = 25
+    private var circleSize: CGFloat = 0
+    private var defaultSpacing: CGFloat = 0
+    
+    private var isFirstLoad = true
     
     private var circleLocation: Location = .center {
         willSet (newLocation) {
@@ -23,26 +26,53 @@ class SecondViewController: UIViewController {
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupCircle()
-        view.addSubview(circleView)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        if isFirstLoad {
+            circleSize = 50
+            defaultSpacing = (view.frame.width - circleSize * 3) / 4
+            
+            setupCircle()
+            view.addSubview(circleView)
+            layoutCircle(at: .center)
+            
+            isFirstLoad = false
+        }
     }
     
     // MARK: - Private methods
     private func setupCircle() {
         circleView.backgroundColor = .white
-        circleView.layer.cornerRadius = 25
+        circleView.layer.cornerRadius = circleSize / 2
         circleView.frame = CGRect(
-            x: Int(Int(view.frame.size.width) / 2 - circleRadius),
-            y: Int(Int(view.frame.size.height) / 2 - circleRadius),
-            width: 50,
-            height: 50
+            x: getOriginX(for: .center),
+            y: (view.frame.size.height - circleSize) / 2,
+            width: circleSize,
+            height: circleSize
         )
         
         addSwipeGesture(to: circleView, direction: .left)
         addSwipeGesture(to: circleView, direction: .right)
     }
+    private func layoutCircle(at location: Location) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
+            self.circleView.frame.origin.x = self.getOriginX(for: location)
+        }
+        
+    }
     
+    private func getOriginX(for location: Location) -> CGFloat {
+        switch location {
+        case .left:
+            return defaultSpacing
+        case .center:
+            return defaultSpacing * 2 + circleSize
+        case .right:
+            return defaultSpacing * 3 + circleSize * 2
+        }
+    }
+
     private func addSwipeGesture(to view: UIView, direction: UISwipeGestureRecognizer.Direction) {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(moveCircle))
         swipeGesture.direction = direction
@@ -50,33 +80,14 @@ class SecondViewController: UIViewController {
     }
     
     @objc private func moveCircle(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        
         switch gestureRecognizer.direction {
         case .left:
-            circleView.frame.origin.x -= 20
+            if circleLocation == .center { circleLocation = .left }
+            if circleLocation == .right { circleLocation = .center }
         case .right:
-            circleView.frame.origin.x += 20
-        default:
-            return
-        }
-    }
-    
-    private func layoutCircle(at location: Location) {
-        switch location {
-        case .left:
-            circleView.frame.origin = CGPoint(
-                x: Int(circleRadius),
-                y: Int(Int(view.frame.size.height) / 2 - circleRadius)
-            )
-        case .center:
-            circleView.frame.origin = CGPoint(
-                x: Int(Int(view.frame.size.width) / 2 - circleRadius),
-                y: Int(Int(view.frame.size.height) / 2 - circleRadius)
-            )
-        case .right:
-            circleView.frame.origin = CGPoint(
-                x: Int(view.frame.size.width - CGFloat(circleRadius)),
-                y: Int(Int(view.frame.size.height) / 2 - circleRadius)
-            )
+            if circleLocation == .center { circleLocation = .right }
+            if circleLocation == .left { circleLocation = .center }
         default:
             return
         }
