@@ -4,22 +4,26 @@
 //
 //  Created by Arina Postnikova on 1.10.22.
 //
-
 import UIKit
 
 class SecondViewController: UIViewController {
     
     // MARK: - Private properties
-    private let circleView = UIView()
-    
-    private var circleSize: CGFloat = 0
+    private let carViewImage = UIImage(named: "car")
+    private lazy var carView = UIImageView(image: carViewImage)
+    private var carSize: CGFloat = 0
     private var defaultSpacing: CGFloat = 0
+    
+    private let policeViewImage = UIImage(named: "police")
+    private lazy var policeView = UIImageView(image: policeViewImage)
+    
+    private let locations = [Location.left, Location.center, Location.right]
     
     private var isFirstLoad = true
     
-    private var circleLocation: Location = .center {
+    private var carLocation: Location = .center {
         willSet (newLocation) {
-            layoutCircle(at: newLocation)
+            layoutCar(at: newLocation)
         }
     }
 
@@ -29,37 +33,62 @@ class SecondViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
         if isFirstLoad {
-            circleSize = 50
-            defaultSpacing = (view.frame.width - circleSize * 3) / 4
+            carSize = 100
+            defaultSpacing = (view.frame.width - carSize * 3) / 4
             
-            setupCircle()
-            view.addSubview(circleView)
-            layoutCircle(at: .center)
+            setupCar()
+            view.addSubview(carView)
+            layoutCar(at: .center)
+            carView.contentMode = .scaleAspectFit
+            
+            setupPolice()
+            view.addSubview(policeView)
             
             isFirstLoad = false
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 5, delay: 3, options: [.curveLinear, .repeat], animations: {
+            self.policeView.frame.origin.y -= (self.view.frame.size.height + 150)
+        })
+    }
+    
     // MARK: - Private methods
-    private func setupCircle() {
-        circleView.backgroundColor = .white
-        circleView.layer.cornerRadius = circleSize / 2
-        circleView.frame = CGRect(
+    private func setupCar() {
+        carView.frame = CGRect(
             x: getOriginX(for: .center),
-            y: (view.frame.size.height - circleSize) / 2,
-            width: circleSize,
-            height: circleSize
+            y: (view.frame.size.height - carSize) / 2,
+            width: 100,
+            height: 150
         )
         
-        addSwipeGesture(to: circleView, direction: .left)
-        addSwipeGesture(to: circleView, direction: .right)
+        addSwipeGesture(to: carView, direction: .left)
+        addSwipeGesture(to: carView, direction: .right)
     }
-    private func layoutCircle(at location: Location) {
+    
+    private func setupPolice() {
+        policeView.frame = CGRect(
+            x: getOriginX(for: locations.randomElement()!),
+            y: view.frame.size.height,
+            width: 100,
+            height: 150
+        )
+    }
+    
+    private func layoutCar(at location: Location) {
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
-            self.circleView.frame.origin.x = self.getOriginX(for: location)
+            self.carView.frame.origin.x = self.getOriginX(for: location)
         }
-        
+    }
+    
+    private func layoutPolice(at location: Location) {
+            self.policeView.frame.origin.x = self.getOriginX(for: location)
     }
     
     private func getOriginX(for location: Location) -> CGFloat {
@@ -67,27 +96,28 @@ class SecondViewController: UIViewController {
         case .left:
             return defaultSpacing
         case .center:
-            return defaultSpacing * 2 + circleSize
+            return defaultSpacing * 2 + carSize
         case .right:
-            return defaultSpacing * 3 + circleSize * 2
+            return defaultSpacing * 3 + carSize * 2
         }
     }
 
-    private func addSwipeGesture(to view: UIView, direction: UISwipeGestureRecognizer.Direction) {
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(moveCircle))
+    private func addSwipeGesture(to view: UIImageView, direction: UISwipeGestureRecognizer.Direction) {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(moveCar))
         swipeGesture.direction = direction
         view.addGestureRecognizer(swipeGesture)
+        carView.isUserInteractionEnabled = true
     }
     
-    @objc private func moveCircle(_ gestureRecognizer: UISwipeGestureRecognizer) {
+    @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {
         
         switch gestureRecognizer.direction {
         case .left:
-            if circleLocation == .center { circleLocation = .left }
-            if circleLocation == .right { circleLocation = .center }
+            if carLocation == .center { carLocation = .left }
+            if carLocation == .right { carLocation = .center }
         case .right:
-            if circleLocation == .center { circleLocation = .right }
-            if circleLocation == .left { circleLocation = .center }
+            if carLocation == .center { carLocation = .right }
+            if carLocation == .left { carLocation = .center }
         default:
             return
         }
