@@ -70,14 +70,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="gUO-QO-H6g">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="gUO-QO-H6g">
+                                <rect key="frame" x="0.0" y="-150" width="390" height="994"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mYg-Zc-jMJ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gUO-QO-H6g" firstAttribute="trailing" secondItem="mYg-Zc-jMJ" secondAttribute="trailing" id="dul-j5-Ymu"/>
+                            <constraint firstItem="gUO-QO-H6g" firstAttribute="top" secondItem="s0h-O4-4g8" secondAttribute="top" constant="-150" id="jco-WP-ZRg"/>
+                            <constraint firstAttribute="bottom" secondItem="gUO-QO-H6g" secondAttribute="bottom" id="llP-Vd-Gto"/>
+                            <constraint firstItem="gUO-QO-H6g" firstAttribute="leading" secondItem="mYg-Zc-jMJ" secondAttribute="leading" id="p3A-WL-vsE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="roadBottomConstraint" destination="llP-Vd-Gto" id="e8v-br-CVR"/>
+                        <outlet property="roadTopConstraint" destination="jco-WP-ZRg" id="S1T-vm-VIT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFU-ke-UdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

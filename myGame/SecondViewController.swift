@@ -26,6 +26,11 @@ class SecondViewController: UIViewController {
             layoutCar(at: newLocation)
         }
     }
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var roadBottomConstraint: NSLayoutConstraint!
 
     // MARK: - Override methods
     override func viewDidLoad() {
@@ -54,9 +59,18 @@ class SecondViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 5, delay: 3, options: [.curveLinear, .repeat], animations: {
-            self.policeView.frame.origin.y -= (self.view.frame.size.height + 150)
-        })
+        animateCops()
+        
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            options: [.curveLinear, .repeat],
+            animations: {
+                self.roadTopConstraint.constant += 144
+                self.roadBottomConstraint.constant -= 144
+                self.view.layoutIfNeeded()
+            }
+        )
     }
     
     // MARK: - Private methods
@@ -81,8 +95,26 @@ class SecondViewController: UIViewController {
         )
     }
     
+    private func animateCops() {
+        UIView.animate(
+            withDuration: 5,
+            delay: 3,
+            options: [.curveLinear],
+            animations: {
+            self.policeView.frame.origin.y -= (self.view.frame.size.height + 150)
+        }, completion: { _ in
+            self.policeView.frame.origin.x = self.getOriginX(for: self.locations.randomElement()!)
+            self.policeView.frame.origin.y += (self.view.frame.size.height + 150)
+            self.animateCops()
+        })
+    }
+    
     private func layoutCar(at location: Location) {
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            options: .curveEaseInOut
+        ) {
             self.carView.frame.origin.x = self.getOriginX(for: location)
         }
     }
@@ -102,8 +134,14 @@ class SecondViewController: UIViewController {
         }
     }
 
-    private func addSwipeGesture(to view: UIImageView, direction: UISwipeGestureRecognizer.Direction) {
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(moveCar))
+    private func addSwipeGesture(
+        to view: UIImageView,
+        direction: UISwipeGestureRecognizer.Direction
+    ) {
+        let swipeGesture = UISwipeGestureRecognizer(
+            target: self,
+            action: #selector(moveCar)
+        )
         swipeGesture.direction = direction
         view.addGestureRecognizer(swipeGesture)
         carView.isUserInteractionEnabled = true
