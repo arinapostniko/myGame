@@ -16,12 +16,6 @@ class ViewController: UIViewController {
         logo.alpha = 0
         startButton.alpha = 0
         
-        logo.makeShadow(shadowOpacity: 0.3,shadowOffset: CGSize(width: 5, height: 5), shadowRadius: 0)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         backgroundImage.makeBlur()
         
         UIView.animate(withDuration: 1, delay: 1.2, options: .curveEaseInOut, animations: {
@@ -29,6 +23,8 @@ class ViewController: UIViewController {
             self.startButton.alpha = 1
         }, completion: { _ in
         })
+        
+        logo.makeShadow(shadowOpacity: 0.3,shadowOffset: CGSize(width: 5, height: 5), shadowRadius: 0)
     }
     
     // MARK: - IBOutlets
