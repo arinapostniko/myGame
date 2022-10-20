@@ -27,6 +27,8 @@ class SecondViewController: UIViewController {
         }
     }
     
+    private var isGaming = true
+    
     // MARK: - IBOutlets
     @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
     
@@ -96,6 +98,7 @@ class SecondViewController: UIViewController {
     }
     
     private func animateCops() {
+        guard isGaming else { return }
         UIView.animate(
             withDuration: 5,
             delay: 3,
@@ -132,6 +135,27 @@ class SecondViewController: UIViewController {
         case .right:
             return defaultSpacing * 3 + carSize * 2
         }
+    }
+    
+    private func intersects() {
+        guard isGaming else { return }
+        if checkIntersect(carView, policeView) {
+            print("GAME OVER")
+            policeView.layer.removeAllAnimations()
+            isGaming = false
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.intersects()
+        }
+    }
+    
+    private func checkIntersect(_ firstView: UIView, _ secondView: UIView) -> Bool {
+        
+        guard let firstFrame = firstView.layer.presentation()?.frame,
+              let secondFrame = secondView.layer.presentation()?.frame else { return false }
+        
+        return firstFrame.intersects(secondFrame)
     }
 
     private func addSwipeGesture(
