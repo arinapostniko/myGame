@@ -32,9 +32,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-6R-EZt">
-                                <rect key="frame" x="115" y="402" width="160" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ym7-Xc-unS" customClass="BackgroundImageView" customModule="myGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="864"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-6R-EZt">
+                                <rect key="frame" x="120" y="397" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ERX-3E-aVL"/>
+                                    <constraint firstAttribute="width" constant="150" id="RBe-S1-P4V"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start" cornerStyle="capsule">
                                     <color key="baseForegroundColor" red="0.77647060160000003" green="0.77254903320000001" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -44,23 +50,38 @@
                                     <action selector="presentSecondViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6o-cy-7DY"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-4s-qSd">
-                                <rect key="frame" x="45" y="91" width="300" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-hV-Vxw" customClass="LogoView" customModule="myGame" customModuleProvider="target">
+                                <rect key="frame" x="16" y="694" width="358" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WYS-Is-hfl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="ei9-c1-Ocr"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Sdf-4s-qSd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="Wg6-BM-o6M"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sdf-4s-qSd" secondAttribute="trailing" constant="45" id="ecf-wc-eub"/>
-                            <constraint firstItem="Sdf-4s-qSd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g0X-h6-JTe"/>
+                            <constraint firstAttribute="top" secondItem="Ym7-Xc-unS" secondAttribute="bottom" constant="-864" id="5cN-fl-yqN"/>
+                            <constraint firstItem="Ym7-Xc-unS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CUO-SP-H9O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ldh-hV-Vxw" secondAttribute="bottom" constant="16" id="QO0-Fv-gI0"/>
+                            <constraint firstItem="ldh-hV-Vxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VO0-HA-GSY"/>
+                            <constraint firstItem="KBn-6R-EZt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRm-Yc-urN"/>
+                            <constraint firstItem="Ym7-Xc-unS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZIt-3x-sUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ldh-hV-Vxw" secondAttribute="trailing" constant="16" id="nRc-dh-VIc"/>
+                            <constraint firstItem="KBn-6R-EZt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="naW-6N-KLP"/>
+                            <constraint firstAttribute="trailing" secondItem="Ym7-Xc-unS" secondAttribute="trailing" id="zch-N1-pUZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wug-MF-4ad"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="Ym7-Xc-unS" id="Yez-8z-SD3"/>
+                        <outlet property="logo" destination="ldh-hV-Vxw" id="qTK-pq-xWX"/>
+                        <outlet property="startButton" destination="KBn-6R-EZt" id="ryc-4T-3PA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.92307692307691" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="135.38461538461539" y="3.5545023696682461"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="yyT-ne-SJo">
@@ -94,7 +115,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="860" height="341"/>
+        <image name="background" width="1536" height="864"/>
+        <image name="logo" width="900" height="300"/>
         <image name="road" width="1446" height="3228"/>
     </resources>
 </document>

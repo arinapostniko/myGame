@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE27913529017A7B00C8BE5C /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE27913429017A7B00C8BE5C /* ShadowView.swift */; };
 		FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918228E84F9C0089DB36 /* AppDelegate.swift */; };
 		FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918428E84F9C0089DB36 /* SceneDelegate.swift */; };
 		FE3B918728E84F9C0089DB36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918628E84F9C0089DB36 /* ViewController.swift */; };
@@ -15,9 +16,12 @@
 		FE3B918F28E84F9D0089DB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3B918D28E84F9D0089DB36 /* LaunchScreen.storyboard */; };
 		FEB997DE28E864BB00ED41ED /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DD28E864BB00ED41ED /* SecondViewController.swift */; };
 		FEB997E028E9BC0600ED41ED /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DF28E9BC0600ED41ED /* Location.swift */; };
+		FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4446429015E1D007789E4 /* CustomClasses.swift */; };
+		FEF4446729017113007789E4 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4446629017113007789E4 /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE27913429017A7B00C8BE5C /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		FE3B917F28E84F9C0089DB36 /* myGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3B918228E84F9C0089DB36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3B918428E84F9C0089DB36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		FE3B919028E84F9D0089DB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEB997DD28E864BB00ED41ED /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		FEB997DF28E9BC0600ED41ED /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FEF4446429015E1D007789E4 /* CustomClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClasses.swift; sourceTree = "<group>"; };
+		FEF4446629017113007789E4 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				FE3B918428E84F9C0089DB36 /* SceneDelegate.swift */,
 				FE3B918628E84F9C0089DB36 /* ViewController.swift */,
 				FEB997DD28E864BB00ED41ED /* SecondViewController.swift */,
+				FEF4446429015E1D007789E4 /* CustomClasses.swift */,
+				FEF4446629017113007789E4 /* BlurView.swift */,
+				FE27913429017A7B00C8BE5C /* ShadowView.swift */,
 				FEB997DF28E9BC0600ED41ED /* Location.swift */,
 				FE3B918828E84F9C0089DB36 /* Main.storyboard */,
 				FE3B918B28E84F9D0089DB36 /* Assets.xcassets */,
@@ -145,10 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB997DE28E864BB00ED41ED /* SecondViewController.swift in Sources */,
+				FEF4446729017113007789E4 /* BlurView.swift in Sources */,
 				FE3B918728E84F9C0089DB36 /* ViewController.swift in Sources */,
 				FEB997E028E9BC0600ED41ED /* Location.swift in Sources */,
+				FE27913529017A7B00C8BE5C /* ShadowView.swift in Sources */,
 				FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */,
 				FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */,
+				FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
