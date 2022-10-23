@@ -33,7 +33,9 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var roadBottomConstraint: NSLayoutConstraint!
-
+    
+    @IBOutlet weak var roadImageView: UIImageView!
+    
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,8 @@ class SecondViewController: UIViewController {
             view.addSubview(policeView)
             
             isFirstLoad = false
+            
+            intersects()
         }
     }
     
@@ -62,17 +66,7 @@ class SecondViewController: UIViewController {
         super.viewDidAppear(animated)
         
         animateCops()
-        
-        UIView.animate(
-            withDuration: 0.3,
-            delay: 0,
-            options: [.curveLinear, .repeat],
-            animations: {
-                self.roadTopConstraint.constant += 144
-                self.roadBottomConstraint.constant -= 144
-                self.view.layoutIfNeeded()
-            }
-        )
+        animateRoad()
     }
     
     // MARK: - Private methods
@@ -142,6 +136,11 @@ class SecondViewController: UIViewController {
         if checkIntersect(carView, policeView) {
             print("GAME OVER")
             policeView.layer.removeAllAnimations()
+            roadImageView.layer.removeAllAnimations()
+            showGameOverAlert(
+                withTitle: "Game over",
+                message: "You can go back to the main menu and start a new game."
+            )
             isGaming = false
         }
         
@@ -151,7 +150,6 @@ class SecondViewController: UIViewController {
     }
     
     private func checkIntersect(_ firstView: UIView, _ secondView: UIView) -> Bool {
-        
         guard let firstFrame = firstView.layer.presentation()?.frame,
               let secondFrame = secondView.layer.presentation()?.frame else { return false }
         
@@ -171,8 +169,33 @@ class SecondViewController: UIViewController {
         carView.isUserInteractionEnabled = true
     }
     
-    @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {
+    private func animateRoad() {
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            options: [.curveLinear, .repeat],
+            animations: {
+                self.roadTopConstraint.constant += 144
+                self.roadBottomConstraint.constant -= 144
+                self.view.layoutIfNeeded()
+            }
+        )
+    }
+    
+    private func showGameOverAlert(withTitle title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
         
+        let action = UIAlertAction(title: "Start new game", style: .default)
+        alert.addAction(action)
+        
+        present(alert, animated: true)
+    }
+    
+    @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {
         switch gestureRecognizer.direction {
         case .left:
             if carLocation == .center { carLocation = .left }

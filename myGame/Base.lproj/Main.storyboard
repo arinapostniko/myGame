@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-672" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="myGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ym7-Xc-unS" customClass="BackgroundImageView" customModule="myGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="864"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-6R-EZt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-6R-EZt">
                                 <rect key="frame" x="120" y="397" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ERX-3E-aVL"/>
@@ -106,6 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="roadBottomConstraint" destination="llP-Vd-Gto" id="e8v-br-CVR"/>
+                        <outlet property="roadImageView" destination="gUO-QO-H6g" id="eGb-ww-6N7"/>
                         <outlet property="roadTopConstraint" destination="jco-WP-ZRg" id="S1T-vm-VIT"/>
                     </connections>
                 </viewController>

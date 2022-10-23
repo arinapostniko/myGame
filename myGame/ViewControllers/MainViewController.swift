@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  myGame
 //
 //  Created by Arina Postnikova on 1.10.22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     // MARK: - Override methods
     override func viewDidLoad() {
@@ -25,6 +25,16 @@ class ViewController: UIViewController {
         })
         
         logo.makeShadow(shadowOpacity: 0.3,shadowOffset: CGSize(width: 5, height: 5), shadowRadius: 0)
+        
+//        let myAttribute = [
+//                    NSAttributedString.Key.font: UIFont(name: "Ubuntu", size: 50.0)!,
+//                    NSAttributedString.Key.foregroundColor: UIColor.white
+//                ]
+//                let myString = NSMutableAttributedString(string: "Coins: ", attributes: myAttribute )
+//
+//                let coinsValue = NSAttributedString(string: "\(coins)")
+//                myString.append(coinsValue)
+
     }
     
     // MARK: - IBOutlets
