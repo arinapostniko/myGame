@@ -21,19 +21,11 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 1, delay: 1.2, options: .curveEaseInOut, animations: {
             self.logo.alpha = 1
             self.startButton.alpha = 1
+            self.menuTextLabel.alpha = 1
         }, completion: { _ in
         })
         
         logo.makeShadow(shadowOpacity: 0.3,shadowOffset: CGSize(width: 5, height: 5), shadowRadius: 0)
-        
-//        let myAttribute = [
-//                    NSAttributedString.Key.font: UIFont(name: "Ubuntu", size: 50.0)!,
-//                    NSAttributedString.Key.foregroundColor: UIColor.white
-//                ]
-//                let myString = NSMutableAttributedString(string: "Coins: ", attributes: myAttribute )
-//
-//                let coinsValue = NSAttributedString(string: "\(coins)")
-//                myString.append(coinsValue)
 
     }
     
@@ -43,6 +35,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     @IBOutlet weak var logo: LogoView!
+    
+    @IBOutlet weak var menuTextLabel: UILabel!
     
     // MARK: - IBActions
     @IBAction func presentSecondViewController(_ sender: Any) {

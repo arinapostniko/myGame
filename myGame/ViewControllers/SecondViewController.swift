@@ -10,14 +10,12 @@ class SecondViewController: UIViewController {
     
     // MARK: - Private properties
     private let carViewImage = UIImage(named: "car")
-    private lazy var carView = UIImageView(image: carViewImage)
-    private var carSize: CGFloat = 0
-    private var defaultSpacing: CGFloat = 0
-    
     private let policeViewImage = UIImage(named: "police")
-    private lazy var policeView = UIImageView(image: policeViewImage)
     
     private let locations = [Location.left, Location.center, Location.right]
+    
+    private var carSize: CGFloat = 0
+    private var defaultSpacing: CGFloat = 0
     
     private var isFirstLoad = true
     
@@ -29,12 +27,17 @@ class SecondViewController: UIViewController {
     
     private var isGaming = true
     
+    private lazy var carView = UIImageView(image: carViewImage)
+    private lazy var policeView = UIImageView(image: policeViewImage)
+    
     // MARK: - IBOutlets
     @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var roadBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var roadImageView: UIImageView!
+    
+    @IBOutlet weak var lblOne: UILabel!
     
     // MARK: - Override methods
     override func viewDidLoad() {

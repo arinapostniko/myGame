@@ -43,6 +43,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="CircularStd-Black" family="Circular Std" pointSize="25"/>
                                     <color key="baseForegroundColor" red="0.77647060160000003" green="0.77254903320000001" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.58823531870000001" green="0.13333332540000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -57,18 +58,44 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="ei9-c1-Ocr"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10C-Uh-ohV">
+                                <rect key="frame" x="23" y="296" width="344" height="76"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <attributedString key="attributedText">
+                                    <fragment content="Перед началом игры запомни: ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="NFSfont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="в игре ты можешь гонять без всяких правил, но в жизни будь внимателен на дороге...">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="NFSfont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="top" secondItem="Ym7-Xc-unS" secondAttribute="bottom" constant="-864" id="5cN-fl-yqN"/>
                             <constraint firstItem="Ym7-Xc-unS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CUO-SP-H9O"/>
+                            <constraint firstItem="10C-Uh-ohV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="Lyr-4c-beN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ldh-hV-Vxw" secondAttribute="bottom" constant="16" id="QO0-Fv-gI0"/>
                             <constraint firstItem="ldh-hV-Vxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VO0-HA-GSY"/>
                             <constraint firstItem="KBn-6R-EZt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRm-Yc-urN"/>
                             <constraint firstItem="Ym7-Xc-unS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZIt-3x-sUf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ldh-hV-Vxw" secondAttribute="trailing" constant="16" id="nRc-dh-VIc"/>
                             <constraint firstItem="KBn-6R-EZt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="naW-6N-KLP"/>
+                            <constraint firstItem="KBn-6R-EZt" firstAttribute="top" secondItem="10C-Uh-ohV" secondAttribute="bottom" constant="25" id="vie-1i-1U9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="10C-Uh-ohV" secondAttribute="trailing" constant="23" id="xAI-KW-jXo"/>
                             <constraint firstAttribute="trailing" secondItem="Ym7-Xc-unS" secondAttribute="trailing" id="zch-N1-pUZ"/>
                         </constraints>
                     </view>
@@ -76,6 +103,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="Ym7-Xc-unS" id="Yez-8z-SD3"/>
                         <outlet property="logo" destination="ldh-hV-Vxw" id="qTK-pq-xWX"/>
+                        <outlet property="menuTextLabel" destination="10C-Uh-ohV" id="yR0-gD-7Hd"/>
                         <outlet property="startButton" destination="KBn-6R-EZt" id="ryc-4T-3PA"/>
                     </connections>
                 </viewController>

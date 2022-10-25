@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE04BC192908382800B5CE5B /* NFS_by_JLTV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE04BC182908381F00B5CE5B /* NFS_by_JLTV.ttf */; };
 		FE27913529017A7B00C8BE5C /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE27913429017A7B00C8BE5C /* ShadowView.swift */; };
 		FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918228E84F9C0089DB36 /* AppDelegate.swift */; };
 		FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918428E84F9C0089DB36 /* SceneDelegate.swift */; };
@@ -22,7 +23,6 @@
 		FEADEDF8290595D400DD8C7B /* CircularStd-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEE290595A100DD8C7B /* CircularStd-BookItalic.ttf */; };
 		FEADEDF9290595D800DD8C7B /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEB290595A100DD8C7B /* CircularStd-Medium.ttf */; };
 		FEADEDFA290595DB00DD8C7B /* CircularStd-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEF290595A100DD8C7B /* CircularStd-MediumItalic.ttf */; };
-		FEADEDFB2905981200DD8C7B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE3B919028E84F9D0089DB36 /* Info.plist */; };
 		FEB997DE28E864BB00ED41ED /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DD28E864BB00ED41ED /* SecondViewController.swift */; };
 		FEB997E028E9BC0600ED41ED /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DF28E9BC0600ED41ED /* Location.swift */; };
 		FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4446429015E1D007789E4 /* CustomClasses.swift */; };
@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE04BC182908381F00B5CE5B /* NFS_by_JLTV.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NFS_by_JLTV.ttf; sourceTree = "<group>"; };
 		FE27913429017A7B00C8BE5C /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		FE3B917F28E84F9C0089DB36 /* myGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3B918228E84F9C0089DB36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE04BC1A2908383300B5CE5B /* Circular */ = {
+			isa = PBXGroup;
+			children = (
+				FEADEDEC290595A100DD8C7B /* CircularStd-Black.ttf */,
+				FEADEDEA290595A000DD8C7B /* CircularStd-BlackItalic.ttf */,
+				FEADEDF1290595A100DD8C7B /* CircularStd-Bold.ttf */,
+				FEADEDED290595A100DD8C7B /* CircularStd-BoldItalic.ttf */,
+				FEADEDF0290595A100DD8C7B /* CircularStd-Book.ttf */,
+				FEADEDEE290595A100DD8C7B /* CircularStd-BookItalic.ttf */,
+				FEADEDEB290595A100DD8C7B /* CircularStd-Medium.ttf */,
+				FEADEDEF290595A100DD8C7B /* CircularStd-MediumItalic.ttf */,
+			);
+			path = Circular;
+			sourceTree = "<group>";
+		};
 		FE3B917628E84F9C0089DB36 = {
 			isa = PBXGroup;
 			children = (
@@ -135,14 +151,8 @@
 		FEADEDF2290595A800DD8C7B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				FEADEDEC290595A100DD8C7B /* CircularStd-Black.ttf */,
-				FEADEDEA290595A000DD8C7B /* CircularStd-BlackItalic.ttf */,
-				FEADEDF1290595A100DD8C7B /* CircularStd-Bold.ttf */,
-				FEADEDED290595A100DD8C7B /* CircularStd-BoldItalic.ttf */,
-				FEADEDF0290595A100DD8C7B /* CircularStd-Book.ttf */,
-				FEADEDEE290595A100DD8C7B /* CircularStd-BookItalic.ttf */,
-				FEADEDEB290595A100DD8C7B /* CircularStd-Medium.ttf */,
-				FEADEDEF290595A100DD8C7B /* CircularStd-MediumItalic.ttf */,
+				FE04BC182908381F00B5CE5B /* NFS_by_JLTV.ttf */,
+				FE04BC1A2908383300B5CE5B /* Circular */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -212,8 +222,8 @@
 				FE3B918C28E84F9D0089DB36 /* Assets.xcassets in Resources */,
 				FEADEDFA290595DB00DD8C7B /* CircularStd-MediumItalic.ttf in Resources */,
 				FEADEDF5290595CA00DD8C7B /* CircularStd-Bold.ttf in Resources */,
+				FE04BC192908382800B5CE5B /* NFS_by_JLTV.ttf in Resources */,
 				FEADEDF8290595D400DD8C7B /* CircularStd-BookItalic.ttf in Resources */,
-				FEADEDFB2905981200DD8C7B /* Info.plist in Resources */,
 				FE3B918A28E84F9C0089DB36 /* Main.storyboard in Resources */,
 				FEADEDF3290595C400DD8C7B /* CircularStd-Black.ttf in Resources */,
 				FEADEDF4290595C700DD8C7B /* CircularStd-BlackItalic.ttf in Resources */,
