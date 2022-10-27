@@ -15,6 +15,7 @@
 		FE3B918A28E84F9C0089DB36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3B918828E84F9C0089DB36 /* Main.storyboard */; };
 		FE3B918C28E84F9D0089DB36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3B918B28E84F9D0089DB36 /* Assets.xcassets */; };
 		FE3B918F28E84F9D0089DB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3B918D28E84F9D0089DB36 /* LaunchScreen.storyboard */; };
+		FE4AC7FD290A8B7E00774FF1 /* UIViewController + UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */; };
 		FEADEDF3290595C400DD8C7B /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEC290595A100DD8C7B /* CircularStd-Black.ttf */; };
 		FEADEDF4290595C700DD8C7B /* CircularStd-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEA290595A000DD8C7B /* CircularStd-BlackItalic.ttf */; };
 		FEADEDF5290595CA00DD8C7B /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDF1290595A100DD8C7B /* CircularStd-Bold.ttf */; };
@@ -40,6 +41,7 @@
 		FE3B918B28E84F9D0089DB36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE3B918E28E84F9D0089DB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3B919028E84F9D0089DB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + UIAlert.swift"; sourceTree = "<group>"; };
 		FEADEDEA290595A000DD8C7B /* CircularStd-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FEADEDEB290595A100DD8C7B /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		FEADEDEC290595A100DD8C7B /* CircularStd-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.ttf"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				FEB997DF28E9BC0600ED41ED /* Location.swift */,
+				FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */,
 				FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */,
 				FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */,
+				FE4AC7FD290A8B7E00774FF1 /* UIViewController + UIAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,8 +37,6 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var roadImageView: UIImageView!
     
-    @IBOutlet weak var lblOne: UILabel!
-    
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,10 +138,13 @@ class SecondViewController: UIViewController {
             print("GAME OVER")
             policeView.layer.removeAllAnimations()
             roadImageView.layer.removeAllAnimations()
-            showGameOverAlert(
-                withTitle: "Game over",
-                message: "You can go back to the main menu and start a new game."
-            )
+            
+            let returnAction = UIAlertAction(title: "Main menu", style: .default) { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+            showAlert(title: "Game over", message: "Cops has caught you!", actions: [returnAction])
+            
             isGaming = false
         }
         
@@ -183,19 +184,6 @@ class SecondViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }
         )
-    }
-    
-    private func showGameOverAlert(withTitle title: String, message: String) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        
-        let action = UIAlertAction(title: "Start new game", style: .default)
-        alert.addAction(action)
-        
-        present(alert, animated: true)
     }
     
     @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {
