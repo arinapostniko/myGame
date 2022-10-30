@@ -15,13 +15,14 @@ class MainViewController: UIViewController {
         
         logo.alpha = 0
         startButton.alpha = 0
+        scoresButton.alpha = 0
         
         backgroundImage.makeBlur()
         
         UIView.animate(withDuration: 1, delay: 1.2, options: .curveEaseInOut, animations: {
             self.logo.alpha = 1
             self.startButton.alpha = 1
-            self.menuTextLabel.alpha = 1
+            self.scoresButton.alpha = 1
         }, completion: { _ in
         })
         
@@ -34,15 +35,24 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
-    @IBOutlet weak var logo: LogoView!
+    @IBOutlet weak var scoresButton: UIButton!
     
-    @IBOutlet weak var menuTextLabel: UILabel!
+    @IBOutlet weak var logo: LogoView!
     
     // MARK: - IBActions
     @IBAction func presentSecondViewController(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         guard let destinationViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController,
+        let navigationController = navigationController else { return }
+        
+        navigationController.pushViewController(destinationViewController, animated: true)
+    }
+    
+    @IBAction func presentScoresViewController(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ScoreViewController") as? ScoreViewController,
         let navigationController = navigationController else { return }
         
         navigationController.pushViewController(destinationViewController, animated: true)

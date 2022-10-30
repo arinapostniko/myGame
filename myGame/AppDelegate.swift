@@ -13,7 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let storage = UserDefaults.standard
+        if !storage.bool(forKey: "hasDefaultValues") {
+            storage.set(0, forKey: "firstScore")
+            storage.set(true, forKey: "hasDefaultValues")
+        }
+         
         return true
     }
 

@@ -25,10 +25,14 @@ class SecondViewController: UIViewController {
         }
     }
     
+    private var score = 0
+    
     private var isGaming = true
     
     private lazy var carView = UIImageView(image: carViewImage)
     private lazy var policeView = UIImageView(image: policeViewImage)
+    
+    private lazy var firstScore = 0
     
     // MARK: - IBOutlets
     @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
@@ -36,6 +40,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var roadBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var roadImageView: UIImageView!
+    
+    @IBOutlet weak var scoreLabel: UILabel!
     
     // MARK: - Override methods
     override func viewDidLoad() {
@@ -56,6 +62,8 @@ class SecondViewController: UIViewController {
             
             setupPolice()
             view.addSubview(policeView)
+            
+            updateScore()
             
             isFirstLoad = false
             
@@ -143,6 +151,7 @@ class SecondViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
             
+            UserDefaults.standard.set(score, forKey: "firstScore")
             showAlert(title: "Game over", message: "Cops has caught you!", actions: [returnAction])
             
             isGaming = false
@@ -182,8 +191,16 @@ class SecondViewController: UIViewController {
                 self.roadTopConstraint.constant += 144
                 self.roadBottomConstraint.constant -= 144
                 self.view.layoutIfNeeded()
+                self.score += 10
             }
         )
+    }
+    
+    private func updateScore() {
+        let storage = UserDefaults.standard
+        firstScore = storage.integer(forKey: "firstScore")
+        
+        scoreLabel.text = firstScore.makeScore()
     }
     
     @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {
