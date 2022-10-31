@@ -25,7 +25,13 @@ class SecondViewController: UIViewController {
         }
     }
     
-    private var score = 0
+    private var score = 0 {
+        didSet {
+            DispatchQueue.main.async {
+                self.scoreLabel.text = String(self.score)
+            }
+        }
+    }
     
     private var isGaming = true
     
@@ -112,6 +118,7 @@ class SecondViewController: UIViewController {
             self.policeView.frame.origin.x = self.getOriginX(for: self.locations.randomElement()!)
             self.policeView.frame.origin.y += (self.view.frame.size.height + 150)
             self.animateCops()
+            self.score += 10
         })
     }
     
@@ -191,7 +198,6 @@ class SecondViewController: UIViewController {
                 self.roadTopConstraint.constant += 144
                 self.roadBottomConstraint.constant -= 144
                 self.view.layoutIfNeeded()
-                self.score += 10
             }
         )
     }
@@ -199,8 +205,6 @@ class SecondViewController: UIViewController {
     private func updateScore() {
         let storage = UserDefaults.standard
         firstScore = storage.integer(forKey: "firstScore")
-        
-        scoreLabel.text = firstScore.makeScore()
     }
     
     @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {

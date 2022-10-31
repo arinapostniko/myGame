@@ -38,8 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ym7-Xc-unS" customClass="BackgroundImageView" customModule="myGame" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="864"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-EH-2MC" userLabel="Background Image" customClass="BackgroundImageView" customModule="myGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-6R-EZt">
                                 <rect key="frame" x="120" y="397" width="150" height="50"/>
@@ -84,22 +84,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="top" secondItem="Ym7-Xc-unS" secondAttribute="bottom" constant="-864" id="5cN-fl-yqN"/>
-                            <constraint firstItem="Ym7-Xc-unS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CUO-SP-H9O"/>
+                            <constraint firstItem="Obf-EH-2MC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2v5-TX-jT7"/>
+                            <constraint firstItem="Obf-EH-2MC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GOG-qg-vbX"/>
+                            <constraint firstItem="Obf-EH-2MC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HZs-Y6-xcl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ldh-hV-Vxw" secondAttribute="bottom" constant="16" id="QO0-Fv-gI0"/>
                             <constraint firstItem="ldh-hV-Vxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VO0-HA-GSY"/>
                             <constraint firstItem="KBn-6R-EZt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRm-Yc-urN"/>
-                            <constraint firstItem="Ym7-Xc-unS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZIt-3x-sUf"/>
                             <constraint firstItem="nY7-ZR-r6Y" firstAttribute="top" secondItem="KBn-6R-EZt" secondAttribute="bottom" constant="8" symbolic="YES" id="dZU-7V-zh4"/>
+                            <constraint firstAttribute="bottom" secondItem="Obf-EH-2MC" secondAttribute="bottom" id="feU-b9-rOb"/>
                             <constraint firstItem="nY7-ZR-r6Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ifV-eY-aXf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ldh-hV-Vxw" secondAttribute="trailing" constant="16" id="nRc-dh-VIc"/>
                             <constraint firstItem="KBn-6R-EZt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="naW-6N-KLP"/>
-                            <constraint firstAttribute="trailing" secondItem="Ym7-Xc-unS" secondAttribute="trailing" id="zch-N1-pUZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wug-MF-4ad"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="Ym7-Xc-unS" id="Yez-8z-SD3"/>
+                        <outlet property="backgroundImage" destination="Obf-EH-2MC" id="Sir-3V-vcj"/>
                         <outlet property="logo" destination="ldh-hV-Vxw" id="qTK-pq-xWX"/>
                         <outlet property="scoresButton" destination="nY7-ZR-r6Y" id="JbT-kB-yx6"/>
                         <outlet property="startButton" destination="KBn-6R-EZt" id="ryc-4T-3PA"/>
@@ -223,6 +223,9 @@
                             <constraint firstItem="ve2-sl-lKg" firstAttribute="top" secondItem="FGe-VK-4GO" secondAttribute="top" id="vpj-UI-SH4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="V5W-zv-AAn" id="aL9-dz-xbr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8Y-Bv-sgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
