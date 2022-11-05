@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storage = UserDefaults.standard
         if !storage.bool(forKey: "hasDefaultValues") {
             storage.set(0, forKey: "firstScore")
+            storage.set(0, forKey: "secondScore")
+            storage.set(0, forKey: "thirdScore")
             storage.set(true, forKey: "hasDefaultValues")
         }
          

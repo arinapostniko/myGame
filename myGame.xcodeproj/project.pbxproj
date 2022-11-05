@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE04BC192908382800B5CE5B /* NFS_by_JLTV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE04BC182908381F00B5CE5B /* NFS_by_JLTV.ttf */; };
 		FE27913529017A7B00C8BE5C /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE27913429017A7B00C8BE5C /* ShadowView.swift */; };
-		FE2DA65D290EE7350076744B /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2DA65C290EE7350076744B /* Scores.swift */; };
+		FE2DA65D290EE7350076744B /* MakeScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2DA65C290EE7350076744B /* MakeScore.swift */; };
 		FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918228E84F9C0089DB36 /* AppDelegate.swift */; };
 		FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918428E84F9C0089DB36 /* SceneDelegate.swift */; };
 		FE3B918728E84F9C0089DB36 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918628E84F9C0089DB36 /* MainViewController.swift */; };
@@ -18,6 +18,8 @@
 		FE3B918F28E84F9D0089DB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3B918D28E84F9D0089DB36 /* LaunchScreen.storyboard */; };
 		FE3BB264290E8DF600BC546B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3BB263290E8DF600BC546B /* ScoreViewController.swift */; };
 		FE4AC7FD290A8B7E00774FF1 /* UIViewController + UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */; };
+		FE835E4E29166A8E00508B3B /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE835E4D29166A8E00508B3B /* Scores.swift */; };
+		FE835E5029166C7500508B3B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE835E4F29166C7500508B3B /* Storage.swift */; };
 		FEADEDF3290595C400DD8C7B /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEC290595A100DD8C7B /* CircularStd-Black.ttf */; };
 		FEADEDF4290595C700DD8C7B /* CircularStd-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEA290595A000DD8C7B /* CircularStd-BlackItalic.ttf */; };
 		FEADEDF5290595CA00DD8C7B /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDF1290595A100DD8C7B /* CircularStd-Bold.ttf */; };
@@ -35,7 +37,7 @@
 /* Begin PBXFileReference section */
 		FE04BC182908381F00B5CE5B /* NFS_by_JLTV.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NFS_by_JLTV.ttf; sourceTree = "<group>"; };
 		FE27913429017A7B00C8BE5C /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
-		FE2DA65C290EE7350076744B /* Scores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
+		FE2DA65C290EE7350076744B /* MakeScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeScore.swift; sourceTree = "<group>"; };
 		FE3B917F28E84F9C0089DB36 /* myGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3B918228E84F9C0089DB36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3B918428E84F9C0089DB36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		FE3B919028E84F9D0089DB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3BB263290E8DF600BC546B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + UIAlert.swift"; sourceTree = "<group>"; };
+		FE835E4D29166A8E00508B3B /* Scores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
+		FE835E4F29166C7500508B3B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FEADEDEA290595A000DD8C7B /* CircularStd-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FEADEDEB290595A100DD8C7B /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		FEADEDEC290595A100DD8C7B /* CircularStd-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.ttf"; sourceTree = "<group>"; };
@@ -144,7 +148,7 @@
 			children = (
 				FEB997DF28E9BC0600ED41ED /* Location.swift */,
 				FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */,
-				FE2DA65C290EE7350076744B /* Scores.swift */,
+				FE2DA65C290EE7350076744B /* MakeScore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				FEF4446429015E1D007789E4 /* CustomClasses.swift */,
+				FE835E4D29166A8E00508B3B /* Scores.swift */,
+				FE835E4F29166C7500508B3B /* Storage.swift */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -247,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB997DE28E864BB00ED41ED /* SecondViewController.swift in Sources */,
-				FE2DA65D290EE7350076744B /* Scores.swift in Sources */,
+				FE2DA65D290EE7350076744B /* MakeScore.swift in Sources */,
 				FEF4446729017113007789E4 /* BlurView.swift in Sources */,
 				FE3B918728E84F9C0089DB36 /* MainViewController.swift in Sources */,
 				FEB997E028E9BC0600ED41ED /* Location.swift in Sources */,
@@ -256,7 +262,9 @@
 				FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */,
 				FE3BB264290E8DF600BC546B /* ScoreViewController.swift in Sources */,
 				FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */,
+				FE835E4E29166A8E00508B3B /* Scores.swift in Sources */,
 				FE4AC7FD290A8B7E00774FF1 /* UIViewController + UIAlert.swift in Sources */,
+				FE835E5029166C7500508B3B /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

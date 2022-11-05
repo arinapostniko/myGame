@@ -39,6 +39,8 @@ class SecondViewController: UIViewController {
     private lazy var policeView = UIImageView(image: policeViewImage)
     
     private lazy var firstScore = 0
+    private lazy var secondScore = 0
+    private lazy var thirdScore = 0
     
     // MARK: - IBOutlets
     @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
@@ -109,7 +111,7 @@ class SecondViewController: UIViewController {
     private func animateCops() {
         guard isGaming else { return }
         UIView.animate(
-            withDuration: 5,
+            withDuration: 4,
             delay: 3,
             options: [.curveLinear],
             animations: {
@@ -205,6 +207,8 @@ class SecondViewController: UIViewController {
     private func updateScore() {
         let storage = UserDefaults.standard
         firstScore = storage.integer(forKey: "firstScore")
+        secondScore = storage.integer(forKey: "secondScore")
+        thirdScore = storage.integer(forKey: "thirdScore")
     }
     
     @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {

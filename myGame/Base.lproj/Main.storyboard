@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xeu-0c-Nhf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xeu-0c-Nhf">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -120,14 +120,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="gUO-QO-H6g">
                                 <rect key="frame" x="0.0" y="-150" width="390" height="994"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-OH-Yys">
-                                <rect key="frame" x="16" y="47" width="74.666666666666671" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-OH-Yys">
+                                <rect key="frame" x="16" y="47" width="97" height="29"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A68-yh-RwS">
-                                <rect key="frame" x="358" y="47" width="16" height="32"/>
+                                <rect key="frame" x="358.33333333333331" y="47" width="15.666666666666686" height="31.666666666666671"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -172,13 +172,13 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dx6-wJ-327">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="750"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdG-9j-kYy">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="250"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Best Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLx-kH-7Qk">
-                                                        <rect key="frame" x="8" y="109.33333333333334" width="173.33333333333334" height="31.666666666666657"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLx-kH-7Qk">
+                                                        <rect key="frame" x="8" y="109.33333333333334" width="100" height="31.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -196,6 +196,54 @@
                                                     <constraint firstAttribute="trailing" secondItem="V5W-zv-AAn" secondAttribute="trailing" constant="48" id="Xgg-ef-xZu"/>
                                                     <constraint firstItem="MLx-kH-7Qk" firstAttribute="centerY" secondItem="GdG-9j-kYy" secondAttribute="centerY" id="kW8-My-dwB"/>
                                                     <constraint firstAttribute="height" constant="250" id="p5U-5D-1TD"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-OV-b1o">
+                                                <rect key="frame" x="0.0" y="250" width="390" height="250"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2st place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPw-OR-pLj">
+                                                        <rect key="frame" x="8" y="109.33333333333331" width="103.66666666666667" height="31.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCF-Xe-JQQ">
+                                                        <rect key="frame" x="326.33333333333331" y="109.33333333333331" width="15.666666666666686" height="31.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="cCF-Xe-JQQ" firstAttribute="centerY" secondItem="PMz-OV-b1o" secondAttribute="centerY" id="Si4-OA-Z3X"/>
+                                                    <constraint firstAttribute="height" constant="250" id="WeQ-cF-RIy"/>
+                                                    <constraint firstItem="aPw-OR-pLj" firstAttribute="leading" secondItem="PMz-OV-b1o" secondAttribute="leading" constant="8" id="Y0v-BS-lXX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cCF-Xe-JQQ" secondAttribute="trailing" constant="48" id="cd9-Gc-TFS"/>
+                                                    <constraint firstItem="aPw-OR-pLj" firstAttribute="centerY" secondItem="PMz-OV-b1o" secondAttribute="centerY" id="eA6-Sz-MTT"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ5-qC-Xgt">
+                                                <rect key="frame" x="0.0" y="500" width="390" height="250"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3st place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHU-QK-7jD">
+                                                        <rect key="frame" x="8" y="109.33333333333337" width="104" height="31.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTC-Lo-sqE">
+                                                        <rect key="frame" x="326.33333333333331" y="109.33333333333337" width="15.666666666666686" height="31.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="31y-YR-hss"/>
+                                                    <constraint firstItem="uHU-QK-7jD" firstAttribute="centerY" secondItem="yZ5-qC-Xgt" secondAttribute="centerY" id="6UY-Q2-CXh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fTC-Lo-sqE" secondAttribute="trailing" constant="48" id="JGA-ho-7sR"/>
+                                                    <constraint firstItem="fTC-Lo-sqE" firstAttribute="centerY" secondItem="yZ5-qC-Xgt" secondAttribute="centerY" id="ZSw-3k-T0R"/>
+                                                    <constraint firstItem="uHU-QK-7jD" firstAttribute="leading" secondItem="yZ5-qC-Xgt" secondAttribute="leading" constant="8" id="wqa-hQ-9Tk"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -224,7 +272,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="scoreLabel" destination="V5W-zv-AAn" id="aL9-dz-xbr"/>
+                        <outlet property="firstScoreLabel" destination="V5W-zv-AAn" id="HdQ-Cv-Ya1"/>
+                        <outlet property="secondScoreLabel" destination="cCF-Xe-JQQ" id="Bps-5E-tYX"/>
+                        <outlet property="thirdScoreLabel" destination="fTC-Lo-sqE" id="5jL-MF-M0d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8Y-Bv-sgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
