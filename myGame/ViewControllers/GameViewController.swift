@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class SecondViewController: UIViewController {
+class GameViewController: UIViewController {
     
     // MARK: - Private properties
     private let carViewImage = UIImage(named: "car")
@@ -38,10 +38,6 @@ class SecondViewController: UIViewController {
     private lazy var carView = UIImageView(image: carViewImage)
     private lazy var policeView = UIImageView(image: policeViewImage)
     
-    private lazy var firstScore = 0
-    private lazy var secondScore = 0
-    private lazy var thirdScore = 0
-    
     // MARK: - IBOutlets
     @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
     
@@ -58,7 +54,6 @@ class SecondViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
         if isFirstLoad {
             carSize = 100
             defaultSpacing = (view.frame.width - carSize * 3) / 4
@@ -71,8 +66,6 @@ class SecondViewController: UIViewController {
             setupPolice()
             view.addSubview(policeView)
             
-            updateScore()
-            
             isFirstLoad = false
             
             intersects()
@@ -81,9 +74,13 @@ class SecondViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         animateCops()
         animateRoad()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        saveScore(score)
     }
     
     // MARK: - Private methods
@@ -160,7 +157,8 @@ class SecondViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
             
-            UserDefaults.standard.set(score, forKey: "firstScore")
+            saveScore(score)
+            
             showAlert(title: "Game over", message: "Cops has caught you!", actions: [returnAction])
             
             isGaming = false
@@ -169,6 +167,23 @@ class SecondViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.intersects()
         }
+    }
+    
+    private func saveScore(_ newScore: Int) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yy"
+        let currentDateString = dateFormatter.string(from: Date())
+        
+        let newScore = ScoreModel(score: score, date: currentDateString)
+        
+        var scores = Storage.shared.scores
+        scores.append(newScore)
+        scores.sort(by: >)
+        while scores.count > 3 {
+            scores.removeLast()
+        }
+        Storage.shared.scores = scores
     }
     
     private func checkIntersect(_ firstView: UIView, _ secondView: UIView) -> Bool {
@@ -202,13 +217,6 @@ class SecondViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }
         )
-    }
-    
-    private func updateScore() {
-        let storage = UserDefaults.standard
-        firstScore = storage.integer(forKey: "firstScore")
-        secondScore = storage.integer(forKey: "secondScore")
-        thirdScore = storage.integer(forKey: "thirdScore")
     }
     
     @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {

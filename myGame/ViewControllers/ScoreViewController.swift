@@ -9,43 +9,47 @@ import UIKit
 
 class ScoreViewController: UIViewController {
     
+    // MARK: - Private properties
     private var isFirstLoad = true
-    
-    private var firstScore: Int = 0
-    private var secondScore: Int = 0
-    private var thirdScore: Int = 0
-    
-    private var scores = [Int]()
+    private var scores = [ScoreModel]()
 
     // MARK: - IBOutlets
     @IBOutlet weak var firstScoreLabel: UILabel!
     @IBOutlet weak var secondScoreLabel: UILabel!
     @IBOutlet weak var thirdScoreLabel: UILabel!
     
+    @IBOutlet weak var firstDateLabel: UILabel!
+    @IBOutlet weak var secondDateLabel: UILabel!
+    @IBOutlet weak var thirdDateLabel: UILabel!
+    
+    @IBOutlet weak var backgroundImage: BackgroundImageView!
+    
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundImage.makeBlur()
+        
         if isFirstLoad {
             updateScores()
             isFirstLoad = false
         }
     }
     
+    // MARK: - Private methods
     private func updateScores() {
-        scores = Scores.shared.getScores()
+        scores = Storage.shared.scores
         
-        if scores.count > 0 {
-            firstScore = scores[0]
-        }
-        if scores.count > 1 {
-            secondScore = scores[1]
-        }
-        if scores.count > 2 {
-            thirdScore = scores[2]
+        while scores.count < 3 {
+            scores.append(ScoreModel(score: 0, date: ""))
+            Storage.shared.scores = scores
         }
         
-        firstScoreLabel.text = String(UserDefaults.standard.integer(forKey: "firstScore"))
-        secondScoreLabel.text = String(UserDefaults.standard.integer(forKey: "secondScore"))
-        thirdScoreLabel.text = String(UserDefaults.standard.integer(forKey: "thirdScore"))
+        firstScoreLabel.text = "\(scores[0].score)"
+        secondScoreLabel.text = "\(scores[1].score)"
+        thirdScoreLabel.text = "\(scores[2].score)"
+        
+        firstDateLabel.text = "\(scores[0].date)"
+        secondDateLabel.text = "\(scores[1].date)"
+        thirdDateLabel.text = "\(scores[2].date)"
     }
 }

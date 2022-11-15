@@ -30,15 +30,15 @@
             </objects>
             <point key="canvasLocation" x="-672" y="4"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="myGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="NFSMostWanted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-EH-2MC" userLabel="Background Image" customClass="BackgroundImageView" customModule="myGame" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-EH-2MC" userLabel="Background Image" customClass="BackgroundImageView" customModule="NFSMostWanted" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-6R-EZt">
@@ -57,7 +57,7 @@
                                     <action selector="presentSecondViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6o-cy-7DY"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-hV-Vxw" customClass="LogoView" customModule="myGame" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-hV-Vxw" customClass="LogoView" customModule="NFSMostWanted" customModuleProvider="target">
                                 <rect key="frame" x="16" y="694" width="358" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="WYS-Is-hfl"/>
@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="135.38461538461539" y="3.5545023696682461"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="yyT-ne-SJo">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="xaU-20-xYU" customClass="SecondViewController" customModule="myGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="xaU-20-xYU" customClass="GameViewController" customModule="NFSMostWanted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s0h-O4-4g8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,12 +160,12 @@
         <!--Score View Controller-->
         <scene sceneID="cUp-0c-JjX">
             <objects>
-                <viewController storyboardIdentifier="ScoreViewController" id="nC9-BL-isK" customClass="ScoreViewController" customModule="myGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreViewController" id="nC9-BL-isK" customClass="ScoreViewController" customModule="NFSMostWanted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FGe-VK-4GO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ve2-sl-lKg" customClass="BackgroundImageView" customModule="myGame" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ve2-sl-lKg" customClass="BackgroundImageView" customModule="NFSMostWanted" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6g-B0-35D">
@@ -189,13 +189,21 @@
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBq-bv-oK2">
+                                                        <rect key="frame" x="308" y="171" width="52" height="31.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="SBq-bv-oK2" firstAttribute="top" secondItem="V5W-zv-AAn" secondAttribute="bottom" constant="30" id="1hv-Pg-FWD"/>
                                                     <constraint firstItem="MLx-kH-7Qk" firstAttribute="leading" secondItem="GdG-9j-kYy" secondAttribute="leading" constant="8" id="6ZZ-lm-JAj"/>
                                                     <constraint firstItem="V5W-zv-AAn" firstAttribute="centerY" secondItem="GdG-9j-kYy" secondAttribute="centerY" id="8qE-nW-fZX"/>
                                                     <constraint firstAttribute="trailing" secondItem="V5W-zv-AAn" secondAttribute="trailing" constant="48" id="Xgg-ef-xZu"/>
                                                     <constraint firstItem="MLx-kH-7Qk" firstAttribute="centerY" secondItem="GdG-9j-kYy" secondAttribute="centerY" id="kW8-My-dwB"/>
                                                     <constraint firstAttribute="height" constant="250" id="p5U-5D-1TD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SBq-bv-oK2" secondAttribute="trailing" constant="30" id="z3g-nH-qXE"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-OV-b1o">
@@ -213,13 +221,21 @@
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7W-DO-CEf">
+                                                        <rect key="frame" x="308" y="171" width="52" height="31.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="C7W-DO-CEf" firstAttribute="top" secondItem="cCF-Xe-JQQ" secondAttribute="bottom" constant="30" id="Lnm-1L-gMB"/>
                                                     <constraint firstItem="cCF-Xe-JQQ" firstAttribute="centerY" secondItem="PMz-OV-b1o" secondAttribute="centerY" id="Si4-OA-Z3X"/>
                                                     <constraint firstAttribute="height" constant="250" id="WeQ-cF-RIy"/>
                                                     <constraint firstItem="aPw-OR-pLj" firstAttribute="leading" secondItem="PMz-OV-b1o" secondAttribute="leading" constant="8" id="Y0v-BS-lXX"/>
                                                     <constraint firstAttribute="trailing" secondItem="cCF-Xe-JQQ" secondAttribute="trailing" constant="48" id="cd9-Gc-TFS"/>
                                                     <constraint firstItem="aPw-OR-pLj" firstAttribute="centerY" secondItem="PMz-OV-b1o" secondAttribute="centerY" id="eA6-Sz-MTT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C7W-DO-CEf" secondAttribute="trailing" constant="30" id="iIC-2A-9ET"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ5-qC-Xgt">
@@ -237,12 +253,20 @@
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfh-g5-tvb">
+                                                        <rect key="frame" x="308" y="171" width="52" height="31.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="31y-YR-hss"/>
                                                     <constraint firstItem="uHU-QK-7jD" firstAttribute="centerY" secondItem="yZ5-qC-Xgt" secondAttribute="centerY" id="6UY-Q2-CXh"/>
+                                                    <constraint firstItem="Rfh-g5-tvb" firstAttribute="top" secondItem="fTC-Lo-sqE" secondAttribute="bottom" constant="30" id="8t2-iL-kHS"/>
                                                     <constraint firstAttribute="trailing" secondItem="fTC-Lo-sqE" secondAttribute="trailing" constant="48" id="JGA-ho-7sR"/>
                                                     <constraint firstItem="fTC-Lo-sqE" firstAttribute="centerY" secondItem="yZ5-qC-Xgt" secondAttribute="centerY" id="ZSw-3k-T0R"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Rfh-g5-tvb" secondAttribute="trailing" constant="30" id="pGt-G0-u6e"/>
                                                     <constraint firstItem="uHU-QK-7jD" firstAttribute="leading" secondItem="yZ5-qC-Xgt" secondAttribute="leading" constant="8" id="wqa-hQ-9Tk"/>
                                                 </constraints>
                                             </view>
@@ -272,8 +296,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="ve2-sl-lKg" id="gx2-US-wND"/>
+                        <outlet property="firstDateLabel" destination="SBq-bv-oK2" id="4N5-Hs-2V2"/>
                         <outlet property="firstScoreLabel" destination="V5W-zv-AAn" id="HdQ-Cv-Ya1"/>
+                        <outlet property="secondDateLabel" destination="C7W-DO-CEf" id="qnk-Kq-i71"/>
                         <outlet property="secondScoreLabel" destination="cCF-Xe-JQQ" id="Bps-5E-tYX"/>
+                        <outlet property="thirdDateLabel" destination="Rfh-g5-tvb" id="d4O-RE-L51"/>
                         <outlet property="thirdScoreLabel" destination="fTC-Lo-sqE" id="5jL-MF-M0d"/>
                     </connections>
                 </viewController>

@@ -7,14 +7,13 @@
 
 import UIKit
 
-protocol BlurView where Self:UIView {
+protocol BlurView where Self: UIView {
     func makeBlur()
 }
 
 extension BlurView {
-    
     func makeBlur() {
-        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
