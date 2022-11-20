@@ -40,7 +40,6 @@ class GameViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var roadTopConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var roadBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var roadImageView: UIImageView!
@@ -158,7 +157,6 @@ class GameViewController: UIViewController {
             }
             
             saveScore(score)
-            
             showAlert(title: "Game over", message: "Cops has caught you!", actions: [returnAction])
             
             isGaming = false
