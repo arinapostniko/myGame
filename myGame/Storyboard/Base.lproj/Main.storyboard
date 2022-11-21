@@ -327,7 +327,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8Y-Bv-sgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684.6153846153845" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="1689" y="4"/>
+        </scene>
+        <!--Score Table View Controller-->
+        <scene sceneID="3x9-7z-AiZ">
+            <objects>
+                <viewController storyboardIdentifier="ScoreTableViewController" id="PTn-pe-42V" customClass="ScoreTableViewController" customModule="NFSMostWanted" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C6c-Ha-VuJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dad-hd-Nx5">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iem-b6-qhO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iem-b6-qhO" firstAttribute="trailing" secondItem="dad-hd-Nx5" secondAttribute="trailing" id="3i5-nE-Cnc"/>
+                            <constraint firstItem="iem-b6-qhO" firstAttribute="bottom" secondItem="dad-hd-Nx5" secondAttribute="bottom" id="TAi-iI-bjU"/>
+                            <constraint firstItem="dad-hd-Nx5" firstAttribute="top" secondItem="iem-b6-qhO" secondAttribute="top" id="VdR-Ym-AC0"/>
+                            <constraint firstItem="dad-hd-Nx5" firstAttribute="leading" secondItem="iem-b6-qhO" secondAttribute="leading" id="qRR-YK-6vq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dad-hd-Nx5" id="sII-9a-pKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUI-h1-JfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="665"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="6ZK-0s-dpM">

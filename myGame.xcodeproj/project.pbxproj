@@ -17,7 +17,7 @@
 		FE3B918C28E84F9D0089DB36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3B918B28E84F9D0089DB36 /* Assets.xcassets */; };
 		FE3B918F28E84F9D0089DB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3B918D28E84F9D0089DB36 /* LaunchScreen.storyboard */; };
 		FE3BB264290E8DF600BC546B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3BB263290E8DF600BC546B /* ScoreViewController.swift */; };
-		FE4AC7FD290A8B7E00774FF1 /* UIViewController + UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */; };
+		FE4AC7FD290A8B7E00774FF1 /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AC7FC290A8B7E00774FF1 /* UIViewController + Alert.swift */; };
 		FE835E5029166C7500508B3B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE835E4F29166C7500508B3B /* Storage.swift */; };
 		FE861CD82929675300EDB348 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE861CD72929675300EDB348 /* SettingsViewController.swift */; };
 		FEA58B9A2923DF7B000C37CD /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA58B992923DF7B000C37CD /* ScoreModel.swift */; };
@@ -31,6 +31,10 @@
 		FEADEDFA290595DB00DD8C7B /* CircularStd-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEADEDEF290595A100DD8C7B /* CircularStd-MediumItalic.ttf */; };
 		FEB997DE28E864BB00ED41ED /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DD28E864BB00ED41ED /* GameViewController.swift */; };
 		FEB997E028E9BC0600ED41ED /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DF28E9BC0600ED41ED /* Location.swift */; };
+		FEBC4A39292ABAC4003694A8 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC4A37292ABAC4003694A8 /* ScoreTableViewController.swift */; };
+		FEBC4A3C292ABFCD003694A8 /* UIViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC4A3B292ABFCD003694A8 /* UIViewController + TableView.swift */; };
+		FEBC4A3F292AC01E003694A8 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC4A3D292AC01E003694A8 /* ScoreCell.swift */; };
+		FEBC4A40292AC01E003694A8 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEBC4A3E292AC01E003694A8 /* ScoreCell.xib */; };
 		FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4446429015E1D007789E4 /* CustomClasses.swift */; };
 		FEF4446729017113007789E4 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4446629017113007789E4 /* BlurView.swift */; };
 /* End PBXBuildFile section */
@@ -48,7 +52,7 @@
 		FE3B918E28E84F9D0089DB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3B919028E84F9D0089DB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3BB263290E8DF600BC546B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
-		FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + UIAlert.swift"; sourceTree = "<group>"; };
+		FE4AC7FC290A8B7E00774FF1 /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
 		FE835E4F29166C7500508B3B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FE861CD72929675300EDB348 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FEA58B992923DF7B000C37CD /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
@@ -62,6 +66,10 @@
 		FEADEDF1290595A100DD8C7B /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.ttf"; sourceTree = "<group>"; };
 		FEB997DD28E864BB00ED41ED /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FEB997DF28E9BC0600ED41ED /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FEBC4A37292ABAC4003694A8 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
+		FEBC4A3B292ABFCD003694A8 /* UIViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + TableView.swift"; sourceTree = "<group>"; };
+		FEBC4A3D292AC01E003694A8 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		FEBC4A3E292AC01E003694A8 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 		FEF4446429015E1D007789E4 /* CustomClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClasses.swift; sourceTree = "<group>"; };
 		FEF4446629017113007789E4 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +156,7 @@
 				FE3B918628E84F9C0089DB36 /* MenuViewController.swift */,
 				FEB997DD28E864BB00ED41ED /* GameViewController.swift */,
 				FE3BB263290E8DF600BC546B /* ScoreViewController.swift */,
+				FEBC4A37292ABAC4003694A8 /* ScoreTableViewController.swift */,
 				FE861CD72929675300EDB348 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -166,7 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				FEB997DF28E9BC0600ED41ED /* Location.swift */,
-				FE4AC7FC290A8B7E00774FF1 /* UIViewController + UIAlert.swift */,
+				FE4AC7FC290A8B7E00774FF1 /* UIViewController + Alert.swift */,
+				FEBC4A3B292ABFCD003694A8 /* UIViewController + TableView.swift */,
 				FE2DA65C290EE7350076744B /* MakeScore.swift */,
 				FEA58B992923DF7B000C37CD /* ScoreModel.swift */,
 			);
@@ -178,6 +188,8 @@
 			children = (
 				FEF4446429015E1D007789E4 /* CustomClasses.swift */,
 				FE835E4F29166C7500508B3B /* Storage.swift */,
+				FEBC4A3D292AC01E003694A8 /* ScoreCell.swift */,
+				FEBC4A3E292AC01E003694A8 /* ScoreCell.xib */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -261,6 +273,7 @@
 				FE3B918A28E84F9C0089DB36 /* Main.storyboard in Resources */,
 				FEADEDF3290595C400DD8C7B /* CircularStd-Black.ttf in Resources */,
 				FEADEDF4290595C700DD8C7B /* CircularStd-BlackItalic.ttf in Resources */,
+				FEBC4A40292AC01E003694A8 /* ScoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,13 +290,16 @@
 				FE3B918728E84F9C0089DB36 /* MenuViewController.swift in Sources */,
 				FEB997E028E9BC0600ED41ED /* Location.swift in Sources */,
 				FE27913529017A7B00C8BE5C /* ShadowView.swift in Sources */,
+				FEBC4A3F292AC01E003694A8 /* ScoreCell.swift in Sources */,
 				FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */,
 				FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */,
+				FEBC4A3C292ABFCD003694A8 /* UIViewController + TableView.swift in Sources */,
+				FEBC4A39292ABAC4003694A8 /* ScoreTableViewController.swift in Sources */,
 				FE3BB264290E8DF600BC546B /* ScoreViewController.swift in Sources */,
 				FE861CD82929675300EDB348 /* SettingsViewController.swift in Sources */,
 				FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */,
 				FEA58B9A2923DF7B000C37CD /* ScoreModel.swift in Sources */,
-				FE4AC7FD290A8B7E00774FF1 /* UIViewController + UIAlert.swift in Sources */,
+				FE4AC7FD290A8B7E00774FF1 /* UIViewController + Alert.swift in Sources */,
 				FE835E5029166C7500508B3B /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

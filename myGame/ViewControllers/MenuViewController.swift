@@ -49,7 +49,7 @@ class MenuViewController: UIViewController {
     
     @IBAction func presentScoresViewController(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ScoreViewController") as? ScoreViewController,
+        guard let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ScoreTableViewController") as? ScoreTableViewController,
         let navigationController = navigationController else { return }
         navigationController.pushViewController(destinationViewController, animated: true)
     }
