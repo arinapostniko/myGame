@@ -32,7 +32,7 @@
 		FEB997DE28E864BB00ED41ED /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DD28E864BB00ED41ED /* GameViewController.swift */; };
 		FEB997E028E9BC0600ED41ED /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB997DF28E9BC0600ED41ED /* Location.swift */; };
 		FEBC4A39292ABAC4003694A8 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC4A37292ABAC4003694A8 /* ScoreTableViewController.swift */; };
-		FEBC4A3C292ABFCD003694A8 /* UIViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC4A3B292ABFCD003694A8 /* UIViewController + TableView.swift */; };
+		FEBC4A3C292ABFCD003694A8 /* ScoreTableViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC4A3B292ABFCD003694A8 /* ScoreTableViewController + TableView.swift */; };
 		FEBC4A3F292AC01E003694A8 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC4A3D292AC01E003694A8 /* ScoreCell.swift */; };
 		FEBC4A40292AC01E003694A8 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEBC4A3E292AC01E003694A8 /* ScoreCell.xib */; };
 		FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4446429015E1D007789E4 /* CustomClasses.swift */; };
@@ -67,7 +67,7 @@
 		FEB997DD28E864BB00ED41ED /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FEB997DF28E9BC0600ED41ED /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FEBC4A37292ABAC4003694A8 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
-		FEBC4A3B292ABFCD003694A8 /* UIViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + TableView.swift"; sourceTree = "<group>"; };
+		FEBC4A3B292ABFCD003694A8 /* ScoreTableViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreTableViewController + TableView.swift"; sourceTree = "<group>"; };
 		FEBC4A3D292AC01E003694A8 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		FEBC4A3E292AC01E003694A8 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 		FEF4446429015E1D007789E4 /* CustomClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClasses.swift; sourceTree = "<group>"; };
@@ -157,6 +157,7 @@
 				FEB997DD28E864BB00ED41ED /* GameViewController.swift */,
 				FE3BB263290E8DF600BC546B /* ScoreViewController.swift */,
 				FEBC4A37292ABAC4003694A8 /* ScoreTableViewController.swift */,
+				FEBC4A3B292ABFCD003694A8 /* ScoreTableViewController + TableView.swift */,
 				FE861CD72929675300EDB348 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -167,6 +168,8 @@
 			children = (
 				FEF4446629017113007789E4 /* BlurView.swift */,
 				FE27913429017A7B00C8BE5C /* ShadowView.swift */,
+				FEBC4A3D292AC01E003694A8 /* ScoreCell.swift */,
+				FEBC4A3E292AC01E003694A8 /* ScoreCell.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -176,7 +179,6 @@
 			children = (
 				FEB997DF28E9BC0600ED41ED /* Location.swift */,
 				FE4AC7FC290A8B7E00774FF1 /* UIViewController + Alert.swift */,
-				FEBC4A3B292ABFCD003694A8 /* UIViewController + TableView.swift */,
 				FE2DA65C290EE7350076744B /* MakeScore.swift */,
 				FEA58B992923DF7B000C37CD /* ScoreModel.swift */,
 			);
@@ -188,8 +190,6 @@
 			children = (
 				FEF4446429015E1D007789E4 /* CustomClasses.swift */,
 				FE835E4F29166C7500508B3B /* Storage.swift */,
-				FEBC4A3D292AC01E003694A8 /* ScoreCell.swift */,
-				FEBC4A3E292AC01E003694A8 /* ScoreCell.xib */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 				FEBC4A3F292AC01E003694A8 /* ScoreCell.swift in Sources */,
 				FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */,
 				FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */,
-				FEBC4A3C292ABFCD003694A8 /* UIViewController + TableView.swift in Sources */,
+				FEBC4A3C292ABFCD003694A8 /* ScoreTableViewController + TableView.swift in Sources */,
 				FEBC4A39292ABAC4003694A8 /* ScoreTableViewController.swift in Sources */,
 				FE3BB264290E8DF600BC546B /* ScoreViewController.swift in Sources */,
 				FE861CD82929675300EDB348 /* SettingsViewController.swift in Sources */,

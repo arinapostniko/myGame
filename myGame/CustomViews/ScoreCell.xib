@@ -47,6 +47,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="COe-TR-WFD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="IUS-Ok-wh6"/>
                     <constraint firstAttribute="trailing" secondItem="DVL-0D-lg8" secondAttribute="trailing" constant="16" id="L7z-4J-D3x"/>
@@ -59,8 +60,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dateLabel" destination="H2p-sc-9uM" id="A59-Qh-acQ"/>
-                <outlet property="scoreLabel" destination="H2p-sc-9uM" id="QWR-hB-x3w"/>
+                <outlet property="dateLabel" destination="R92-lA-Igh" id="Z7t-MD-Jwx"/>
+                <outlet property="scoreLabel" destination="DVL-0D-lg8" id="zEo-w3-yMn"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
         </tableViewCell>

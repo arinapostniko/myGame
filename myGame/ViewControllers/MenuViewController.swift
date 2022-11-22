@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MenuViewController.swift
 //  myGame
 //
 //  Created by Arina Postnikova on 1.10.22.

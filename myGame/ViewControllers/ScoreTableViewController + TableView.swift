@@ -1,5 +1,5 @@
 //
-//  UIViewController + TableView.swift
+//  ScoreTableViewController + TableView.swift
 //  myGame
 //
 //  Created by Arina Postnikova on 20.11.22.
@@ -17,12 +17,20 @@ extension ScoreTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ScoreCell else {
+        let index = indexPath.row
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: cellIdentifier,
+            for: indexPath
+        ) as? ScoreCell,
+              index >= 0,
+              index < scores.count
+        else {
             return UITableViewCell()
         }
         
-        cell.scoreLabel.text = scores[indexPath.row].score
-        cell.dateLabel.text = scores[indexPath.row].date
+        cell.setupCells(with: scores[index])
+        
+        cell.backgroundColor = index % 2 == 1 ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : #colorLiteral(red: 0.8978094459, green: 0.9091117978, blue: 0.9089129567, alpha: 1)
         
         return cell
     }

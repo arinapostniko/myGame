@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  GameViewController.swift
 //  myGame
 //
 //  Created by Arina Postnikova on 1.10.22.
@@ -178,9 +178,6 @@ class GameViewController: UIViewController {
         var scores = Storage.shared.scores
         scores.append(newScore)
         scores.sort(by: >)
-        while scores.count > 3 {
-            scores.removeLast()
-        }
         Storage.shared.scores = scores
     }
     
