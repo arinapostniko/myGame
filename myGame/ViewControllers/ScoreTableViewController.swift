@@ -11,6 +11,7 @@ class ScoreTableViewController: UIViewController {
     
     // MARK: - Public properties
     let cellIdentifier = "ScoreCell"
+    var selectedRows: Set<Int> = []
     lazy var scores = Storage.shared.scores
 
     // MARK: - IBOutlets
@@ -29,4 +30,10 @@ class ScoreTableViewController: UIViewController {
         let cellNib = UINib(nibName: cellIdentifier, bundle: Bundle.main)
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
     }
+    
+    // MARK: - IBActions
+    @IBAction func editScoresTable(_ sender: Any) {
+        tableView.isEditing.toggle()
+    }
+    
 }

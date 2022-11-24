@@ -39,17 +39,14 @@ class MenuViewController: UIViewController {
         })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? ScoreTableViewController else { return }
+    }
+    
     // MARK: - IBActions
     @IBAction func presentSecondViewController(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let destinationViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? GameViewController,
-        let navigationController = navigationController else { return }
-        navigationController.pushViewController(destinationViewController, animated: true)
-    }
-    
-    @IBAction func presentScoresViewController(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ScoreTableViewController") as? ScoreTableViewController,
         let navigationController = navigationController else { return }
         navigationController.pushViewController(destinationViewController, animated: true)
     }
