@@ -377,8 +377,22 @@
                     <view key="view" contentMode="scaleToFill" id="ABm-QL-LB6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqQ-6O-qCE">
+                                <rect key="frame" x="118.66666666666669" y="783" width="156" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Report a problem"/>
+                                <connections>
+                                    <action selector="reportButton:" destination="cn9-fX-ajD" eventType="touchUpInside" id="MEU-Vw-dbZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="79F-eF-jq2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hqQ-6O-qCE" firstAttribute="centerX" secondItem="79F-eF-jq2" secondAttribute="centerX" id="9Vn-7x-Xwf"/>
+                            <constraint firstItem="hqQ-6O-qCE" firstAttribute="bottom" secondItem="79F-eF-jq2" secondAttribute="bottom" id="DbH-fA-kXd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg5-dn-ZiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

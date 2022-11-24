@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE04BC192908382800B5CE5B /* NFS_by_JLTV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE04BC182908381F00B5CE5B /* NFS_by_JLTV.ttf */; };
 		FE27913529017A7B00C8BE5C /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE27913429017A7B00C8BE5C /* ShadowView.swift */; };
+		FE2D9E35292FBA5200455818 /* SettingsViewController + MailCompose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D9E34292FBA5200455818 /* SettingsViewController + MailCompose.swift */; };
 		FE2DA65D290EE7350076744B /* MakeScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2DA65C290EE7350076744B /* MakeScore.swift */; };
 		FE3B918328E84F9C0089DB36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918228E84F9C0089DB36 /* AppDelegate.swift */; };
 		FE3B918528E84F9C0089DB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B918428E84F9C0089DB36 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		FE04BC182908381F00B5CE5B /* NFS_by_JLTV.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NFS_by_JLTV.ttf; sourceTree = "<group>"; };
 		FE27913429017A7B00C8BE5C /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		FE2D9E34292FBA5200455818 /* SettingsViewController + MailCompose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + MailCompose.swift"; sourceTree = "<group>"; };
 		FE2DA65C290EE7350076744B /* MakeScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeScore.swift; sourceTree = "<group>"; };
 		FE3B917F28E84F9C0089DB36 /* NFSMostWanted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFSMostWanted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3B918228E84F9C0089DB36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				FEBC4A37292ABAC4003694A8 /* ScoreTableViewController.swift */,
 				FEBC4A3B292ABFCD003694A8 /* ScoreTableViewController + TableView.swift */,
 				FE861CD72929675300EDB348 /* SettingsViewController.swift */,
+				FE2D9E34292FBA5200455818 /* SettingsViewController + MailCompose.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				FE861CD82929675300EDB348 /* SettingsViewController.swift in Sources */,
 				FEF4446529015E1D007789E4 /* CustomClasses.swift in Sources */,
 				FEA58B9A2923DF7B000C37CD /* ScoreModel.swift in Sources */,
+				FE2D9E35292FBA5200455818 /* SettingsViewController + MailCompose.swift in Sources */,
 				FE4AC7FD290A8B7E00774FF1 /* UIViewController + Alert.swift in Sources */,
 				FE835E5029166C7500508B3B /* Storage.swift in Sources */,
 			);
