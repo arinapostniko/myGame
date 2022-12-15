@@ -52,6 +52,8 @@ class GameViewController: UIViewController {
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        prepareMusic()
     }
     
     override func viewWillLayoutSubviews() {
@@ -219,13 +221,12 @@ class GameViewController: UIViewController {
         )
     }
     
-    private func playMusic() {
+    private func prepareMusic() {
         if let musicURL = Bundle.main.url(forResource: "Bicep - Glue", withExtension: "mp3") {
             if let audioPlayer = try? AVAudioPlayer(contentsOf: musicURL) {
                 music = audioPlayer
                 music.numberOfLoops = -1
                 music.prepareToPlay()
-                music.play()
             }
         }
     }
@@ -245,6 +246,10 @@ class GameViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func playMusicButton(_ sender: Any) {
-        playMusic()
+        if music.isPlaying {
+            music.stop()
+        } else {
+            music.play()
+        }
     }
 }
