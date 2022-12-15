@@ -5,6 +5,7 @@
 //  Created by Arina Postnikova on 1.10.22.
 //
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
     
@@ -34,6 +35,8 @@ class GameViewController: UIViewController {
     }
     
     private var isGaming = true
+    
+    private var music = AVAudioPlayer()
     
     private lazy var carView = UIImageView(image: carViewImage)
     private lazy var policeView = UIImageView(image: policeViewImage)
@@ -80,6 +83,7 @@ class GameViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         saveScore(score)
+        music.stop()
     }
     
     // MARK: - Private methods
@@ -173,12 +177,13 @@ class GameViewController: UIViewController {
         dateFormatter.dateFormat = "dd.MM.yy"
         let currentDateString = dateFormatter.string(from: Date())
         
-        let newScore = ScoreModel(score: score, date: currentDateString)
-        
-        var scores = Storage.shared.scores
-        scores.append(newScore)
-        scores.sort(by: >)
-        Storage.shared.scores = scores
+        if score != 0 {
+            let newScore = ScoreModel(score: score, date: currentDateString)
+            var scores = Storage.shared.scores
+            scores.append(newScore)
+            scores.sort(by: >)
+            Storage.shared.scores = scores
+        } else { return }
     }
     
     private func checkIntersect(_ firstView: UIView, _ secondView: UIView) -> Bool {
@@ -214,6 +219,17 @@ class GameViewController: UIViewController {
         )
     }
     
+    private func playMusic() {
+        if let musicURL = Bundle.main.url(forResource: "Bicep - Glue", withExtension: "mp3") {
+            if let audioPlayer = try? AVAudioPlayer(contentsOf: musicURL) {
+                music = audioPlayer
+                music.numberOfLoops = -1
+                music.prepareToPlay()
+                music.play()
+            }
+        }
+    }
+    
     @objc private func moveCar(_ gestureRecognizer: UISwipeGestureRecognizer) {
         switch gestureRecognizer.direction {
         case .left:
@@ -226,5 +242,9 @@ class GameViewController: UIViewController {
             return
         }
     }
-
+    
+    // MARK: - IBActions
+    @IBAction func playMusicButton(_ sender: Any) {
+        playMusic()
+    }
 }

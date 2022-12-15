@@ -140,8 +140,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="gUO-QO-H6g">
                                 <rect key="frame" x="0.0" y="-150" width="393" height="1002"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-OH-Yys">
-                                <rect key="frame" x="16" y="47" width="97" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-OH-Yys">
+                                <rect key="frame" x="16" y="58.999999999999993" width="75" height="31.666666666666664"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -152,14 +152,26 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-cz-ldf">
+                                <rect key="frame" x="32" y="98" width="43" height="35"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="music.note" catalog="system"/>
+                                <connections>
+                                    <action selector="playMusicButton:" destination="xaU-20-xYU" eventType="touchUpInside" id="rE2-pM-D2v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mYg-Zc-jMJ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MVL-cz-ldf" firstAttribute="centerX" secondItem="zs4-OH-Yys" secondAttribute="centerX" id="C7h-Z3-2jm"/>
                             <constraint firstItem="zs4-OH-Yys" firstAttribute="leading" secondItem="mYg-Zc-jMJ" secondAttribute="leading" constant="16" id="NLg-ER-mbr"/>
+                            <constraint firstItem="MVL-cz-ldf" firstAttribute="leading" secondItem="mYg-Zc-jMJ" secondAttribute="leading" constant="32" id="U60-yI-xpt"/>
                             <constraint firstItem="gUO-QO-H6g" firstAttribute="trailing" secondItem="mYg-Zc-jMJ" secondAttribute="trailing" id="dul-j5-Ymu"/>
                             <constraint firstItem="A68-yh-RwS" firstAttribute="top" secondItem="mYg-Zc-jMJ" secondAttribute="top" id="eKg-jo-dob"/>
                             <constraint firstItem="gUO-QO-H6g" firstAttribute="top" secondItem="s0h-O4-4g8" secondAttribute="top" constant="-150" id="jco-WP-ZRg"/>
+                            <constraint firstItem="MVL-cz-ldf" firstAttribute="top" secondItem="zs4-OH-Yys" secondAttribute="bottom" constant="7.3300000000000001" id="lFs-HD-UTo"/>
                             <constraint firstItem="zs4-OH-Yys" firstAttribute="top" secondItem="mYg-Zc-jMJ" secondAttribute="top" id="lOQ-f3-Hdr"/>
                             <constraint firstAttribute="bottom" secondItem="gUO-QO-H6g" secondAttribute="bottom" id="llP-Vd-Gto"/>
                             <constraint firstItem="gUO-QO-H6g" firstAttribute="leading" secondItem="mYg-Zc-jMJ" secondAttribute="leading" id="p3A-WL-vsE"/>
@@ -397,12 +409,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg5-dn-ZiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2468" y="4"/>
+            <point key="canvasLocation" x="2467.93893129771" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="1536" height="864"/>
         <image name="logo" width="900" height="300"/>
+        <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="road" width="1446" height="3228"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
